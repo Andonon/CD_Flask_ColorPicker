@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Color Picker</title>
+        <meta charset='utf-8' />
+        <link rel='stylesheet' href='/test.css'>
+        <meta description="Color Picker assignment for Coding Dojo Flask fundamentals">
+        <link rel="shortcut icon" href="{{url_for('static', filename='favicon.ico') }}">
+    </head>
+    <style>
+        body {
+            background-color: rgb(255,255,255);            
+            background-color: rgb({{ red }},{{ green }},{{ blue }});
+        }
+    </style>
+    <body>
+        <div id=wrapper>
+            <h1>Enter your color values below:</h1>
+            <form id=colorpickerform>
+                <div id="colorpicker">
+                    <div id="colorlabels">
+                        <h3>Red:</h3><br>
+                        <h3>Green:</h3><br>
+                        <h3>Blue:</h3><br>
+                    </div>
+                    <div id="colorinputs">
+                        <p><input type="number" name="red" length="3" class="inputbox" placeholder="Enter RGB (0 to 255)"></p><br>
+                        <p><input type="number" name="green" length="3" class="inputbox" placeholder="Enter RGB (0 to 255)"><p><br>
+                        <p><input type="number" name="blue" length="3" class="inputbox" placeholder="Enter RGB (0 to 255)"></p><br>
+                    </div>
+                <input id="linkbutton" action="" class="linkbutton" type="button" value="Show My Color!">
+                </div>
+            </form>                
+        </div>
+        <footer>
+            <p><img src="{{ url_for('static', filename='favicon.ico')}}">by Troy Center June 2017, Coding Dojo, Flask fundamentals.</p>
+        </footer>
+    </body>
